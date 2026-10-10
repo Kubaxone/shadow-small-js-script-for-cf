@@ -31,7 +31,7 @@ export default {
     }
 
     // Basic bot signal check
-    if (/bot|crawler|spider|scrapy|curl|wget|python-requests/i.test(userAgent)) {
+    if (/bot|crawler|spider|scrapy|curl|wget|python-requests|headlesschrome|phantomjs|selenium|playwright|puppeteer/i.test(userAgent)) {
       console.error("Shadow blocked request: bot-like User-Agent");
       return new Response("Request blocked", { status: 400 });
     }
